@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про нас — Matcha</title>
+  <style>
+    :root {
+      --primary-color: #4a7729;
+      --secondary-color: #78b03b;
+      --light-bg: #fffaf7;
+      --white: #ffffff;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg);
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+    
+    header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 20px;
+    }
+    
+    .logo img {
+      height: 90px;
+    }
+    
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-menu a {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--primary-color);
+      transition: color 0.3s;
+      font-size: 16px;
+    }
+    
+    .nav-menu a:hover {
+      color: var(--secondary-color);
+    }
+    
+    main {
+      margin-top: 100px;
+      padding: 40px 20px;
+    }
+    
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .about-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .about-text h1 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .about-text p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    
+    .highlight {
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+    
+    .feature-list {
+      margin-top: 30px;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-right: 15px;
+      color: var(--secondary-color);
+    }
+    
+    .feature-text strong {
+      color: var(--primary-color);
+    }
+    
+    @media (max-width: 768px) {
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .header-container {
+        flex-direction: column;
+      }
+      
+      .nav-menu {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="Логотип Matcha">
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="main.html">Головна</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="location.html">Локація</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="schedule.html">Години роботи</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="about-container">
+      <div class="about-image">
+        <img src="about.png" alt="Matcha Powder">
+      </div>
+      <div class="about-text">
+        <h1><span class="highlight">МАТЧА</span> користується популярністю через ряд факторів, які поєднують унікальний смак, потужність антиоксидантів. А також це про:</h1>
+        
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-text">
+              <strong>Смак і Аромат:</strong> Матча має насичений, багатий смак з легкою гіркотою та ароматом.
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-text">
+              <strong>Здоров'я та Антиоксиданти:</strong> Матча вважається одним з найдієвіших напоїв, оскільки вміст антиоксидантів в ньому вищий, ніж у звичайних зелених чаїв.
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-text">
+              <strong>Енергетичний Заряд:</strong> Матча містить теанін, амінокислоту, яка може забезпечити поміркований енергетичний заряд.
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-text">
+              <strong>Традиційність та Ритуал:</strong> Матча є ключовою частиною японської традиції чаювання.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

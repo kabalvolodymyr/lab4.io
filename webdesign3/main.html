@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Головна — Matcha</title>
+  <style>
+    :root {
+      --primary: #4a7729;
+      --secondary: #78b03b;
+      --light: #f9f9f9;
+      --white: #fff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: #333;
+    }
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      text-align: center;
+    }
+    .logo img {
+      height: 90px;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 25px;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    main {
+      margin-top: 120px;
+      padding: 40px 20px;
+      min-height: calc(100vh - 120px);
+      display: flex;
+      align-items: center;
+    }
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-text {
+      padding-right: 40px;
+    }
+    h1 {
+      color: var(--primary);
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: var(--secondary);
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .hero-images {
+      display: flex;
+      gap: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-images img {
+      height: 400px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .hero-images img:first-child {
+      width: 60%;
+      border-radius: 12px 0 0 12px;
+      z-index: 1;
+    }
+    .hero-images img:last-child {
+      width: 50%;
+      border-radius: 0 12px 12px 0;
+      margin-left: -20%;
+    }
+    .hero-images img:hover {
+      transform: scale(1.02);
+      z-index: 2;
+    }
+    @media (max-width: 992px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+      .hero-text {
+        padding-right: 0;
+        text-align: center;
+      }
+      .hero-images {
+        margin-top: 40px;
+      }
+    }
+    @media (max-width: 768px) {
+      .hero-images {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .hero-images img {
+        width: 100% !important;
+        height: 300px;
+        margin-left: 0 !important;
+        border-radius: 12px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Matcha Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="main.html">Головна</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="location.html">Локація</a></li>
+        <li><a href="menu.html">Меню</a></li>
+        <li><a href="schedule.html">Години роботи</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>MATCHA</h1>
+        <p class="subtitle">Green story for your morning</p>
+      </div>
+      <div class="hero-images">
+        <img src="main1.png" alt="Кава">
+        <img src="main2.png" alt="Інтер'єр">
+      </div>
+    </div>
+  </main>
+</body>
+</html>

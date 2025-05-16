@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Години роботи — Matcha</title>
+  <style>
+    :root {
+      --primary: #4a7729;
+      --secondary: #78b03b;
+      --light: #f4fff4;
+      --white: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: var(--light);
+      color: #333;
+    }
+
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      text-align: center;
+    }
+
+    .logo img {
+      height: 90px;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    main {
+      margin-top: 120px;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .layout {
+      position: relative;
+      width: 800px;
+      height: 500px;
+    }
+
+    .time-box {
+      position: absolute;
+      top: 50%;
+      left: 240px;
+      transform: translateY(-50%);
+      background-color: var(--secondary);
+      padding: 30px 50px;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    .img-left {
+      position: absolute;
+      top: 40px; 
+      left: 0;
+      width: 240px;
+      height: 420px; 
+      object-fit: cover;
+      z-index: 3; 
+    }
+
+    .img-bottom {
+      position: absolute;
+      top: 340px;
+      left: 0;
+      width: 620px;
+      height: 120px;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .img-small-right {
+      position: absolute;
+      top: 160px; 
+      left: 430px;
+      width: 190px;
+      height: 180px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      z-index: 4;
+    }
+
+    .img-small-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    
+
+    @media (max-width: 992px) {
+      .layout {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+      }
+
+      .img-left,
+      .img-bottom,
+      .img-small-right,
+      .time-box {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+      }
+
+      .img-left,
+      .img-bottom,
+      .img-small-right img {
+        width: 90%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .img-small-right {
+        width: 90%;
+        height: auto;
+        box-shadow: none;
+      }
+
+      .time-box {
+        background: var(--secondary);
+        padding: 20px;
+        border-radius: 8px;
+        color: white;
+        font-size: 1.2rem;
+        width: 90%;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .logo img {
+        height: 70px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .time-box {
+        font-size: 1rem;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Matcha Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="main.html">Головна</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="location.html">Локація</a></li>
+        <li><a href="menu.html">Меню</a></li>
+        <li><a href="schedule.html">Години роботи</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="layout">
+      <img src="schedule1.png" alt="Фото зліва" class="img-left">
+      <img src="schedule2.png" alt="Фото знизу" class="img-bottom">
+      <div class="img-small-right">
+        <img src="schedule3.png" alt="Фото справа">
+      </div>
+      <div class="time-box">
+        <p>Пн–Пт<br>7:30 – 15:00</p>
+        <p>Вихідні<br>9:00 – 18:00</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

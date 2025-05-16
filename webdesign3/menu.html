@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Меню — Matcha</title>
+  <style>
+    :root {
+      --primary: #4a7729;
+      --secondary: #78b03b;
+      --light: #fefefe;
+      --white: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: var(--light);
+      color: #333;
+    }
+
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      text-align: center;
+    }
+
+    .logo img {
+      height: 90px;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    main {
+      margin-top: 120px;
+      padding: 20px;
+    }
+
+    .menu-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .menu-title {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 30px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .menu-left, .menu-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .menu-left .menu-item, .menu-right .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed #ccc;
+    }
+
+    .menu-right .additional-box {
+      background: var(--secondary);
+      color: var(--white);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .menu-right .additional-box h2 {
+      margin-top: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .item-name {
+      font-weight: 500;
+    }
+
+    .item-price {
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Matcha Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="main.html">Головна</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="location.html">Локація</a></li>
+        <li><a href="menu.html">Меню</a></li>
+        <li><a href="schedule.html">Години</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="menu-container">
+      <h2 class="menu-title">Меню</h2>
+      <div class="menu">
+      
+        <div class="menu-left">
+          <div class="menu-item"><span class="item-name">МАТЧА</span><span class="item-price">55</span></div>
+          <div class="menu-item"><span class="item-name">МАТЧА-ЛАТТЕ</span><span class="item-price">65</span></div>
+          <div class="menu-item"><span class="item-name">ЕКСПРЕСО</span><span class="item-price">30</span></div>
+          <div class="menu-item"><span class="item-name">АМЕРИКАНО</span><span class="item-price">40</span></div>
+          <div class="menu-item"><span class="item-name">КАПУЧИНО</span><span class="item-price">45</span></div>
+          <div class="menu-item"><span class="item-name">ЛАТТЕ</span><span class="item-price">55</span></div>
+          <div class="menu-item"><span class="item-name">Флет Вайт</span><span class="item-price">50</span></div>
+          <div class="menu-item"><span class="item-name">РАФ</span><span class="item-price">50</span></div>
+          <div class="menu-item"><span class="item-name">ЧАЙ ЧОРНИЙ</span><span class="item-price">30</span></div>
+          <div class="menu-item"><span class="item-name">ЧАЙ ЗЕЛЕНИЙ</span><span class="item-price">30</span></div>
+          <div class="menu-item"><span class="item-name">ЧАЙ КВІТКОВИЙ</span><span class="item-price">33</span></div>
+        </div>
+
+       
+        <div class="menu-right">
+          <div class="additional-box">
+            <h2>additional</h2>
+            <div class="menu-item"><span class="item-name">Матча медовик</span><span class="item-price">65</span></div>
+            <div class="menu-item"><span class="item-name">Матча тірамісу</span><span class="item-price">60</span></div>
+            <div class="menu-item"><span class="item-name">Матча чізкейк</span><span class="item-price">75</span></div>
+            <div class="menu-item"><span class="item-name">Чізкейк</span><span class="item-price">50</span></div>
+            <div class="menu-item"><span class="item-name">Макаронс</span><span class="item-price">35</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
